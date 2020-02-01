@@ -18,6 +18,7 @@ public class inventory_script : MonoBehaviour
         for (int i = 0; i < allSlots; i++)
         {
             slot[i] = slotHolder.transform.GetChild(i).gameObject;
+            
 
         
         }
@@ -26,12 +27,17 @@ public class inventory_script : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-            inventoryEnabled = !inventoryEnabled;
+        //print(inventory.transform.GetChild(0).GetChild(0).ToString());
 
-        if (inventoryEnabled == true) 
-        {
-            inventory.SetActive(true);
+        inventory.transform.GetChild(0).GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = FirstPersonAIO.cogCounter.ToString();
+        
+
+        if (Input.GetKeyDown(KeyCode.I))
+
+        if (inventoryEnabled == true)
+            {
+                inventoryEnabled = !inventoryEnabled;
+                inventory.SetActive(true);
         }
         else
         {

@@ -53,6 +53,8 @@ using System.Collections.Generic;
 
 public class FirstPersonAIO : MonoBehaviour {
 
+    public static int cogCounter = 0;
+
     public string versionNum = "19.10.17f";
 
     #region Variables
@@ -333,6 +335,7 @@ public class BETA_SETTINGS{
                 Interactable inter = hit.collider.GetComponent(typeof(Interactable)) as Interactable;
                 if (inter != null)
                 {
+                    cogCounter++;
                     Destroy(inter.gameObject);
                 }
             }
