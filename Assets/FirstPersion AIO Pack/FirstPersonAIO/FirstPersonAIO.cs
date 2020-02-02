@@ -350,6 +350,8 @@ public class BETA_SETTINGS{
             }
             if (cogCounter >= cogsToWin)
             {
+                won = false;
+                cogCounter = 0;
                 SceneManager.LoadScene("start");
             }
             
