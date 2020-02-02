@@ -11,6 +11,8 @@ public class inventory_script : MonoBehaviour
     private GameObject[] slot;
     public GameObject slotHolder;
     
+    
+
     void Start()
     {
         allSlots = 1;

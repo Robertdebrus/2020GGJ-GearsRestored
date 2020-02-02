@@ -56,7 +56,7 @@ public class FirstPersonAIO : MonoBehaviour {
 
     public static int cogCounter = 0;
     public static bool won = false;
-    public static int cogsToWin = 3;
+
 
     public string versionNum = "19.10.17f";
 
@@ -339,21 +339,17 @@ public class BETA_SETTINGS{
                 print(inter);
                 if (inter != null)
                 {
-                    FinishRadio fin = hit.collider.GetComponent(typeof(FinishRadio)) as FinishRadio;
-                    if (fin != null)
-                    {
-                        won = true;
-                    }
+                    //FinishRadio fin = hit.collider.GetComponent(typeof(FinishRadio)) as FinishRadio;
+                   // print(fin);
+                    //if (fin != null)
+                    //{
+                        
+                    //}
                     cogCounter++;
                     Destroy(inter.gameObject);
                 }
             }
-            if (cogCounter >= cogsToWin)
-            {
-                won = false;
-                cogCounter = 0;
-                SceneManager.LoadScene("start");
-            }
+           
             
         }
         #region Look Settings - Update
